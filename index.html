@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo de la pagina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!--Menu-->
+<body>
+    <div id="menu">
+        <nav >
+            <h1>Titulo o logotipo</h1>
+            <ul>    
+                <li><a href="file:///C:/Users/alexi/Documents/pima/index.html">Inicio</a></li>
+                <li><a href="#Nosotros">Sobre Nosotros</a></li>
+                <li><a href="file:///C:/Users/alexi/Documents/pima/Servicios.html">Servicios</a></li>
+                <li><a href="#Iniciar_sesion">Iniciar sesion</a></li>
+
+            </ul>
+        </nav>    
+    </div>
+</body>
+<!--Fin de menu-->
+
+<!-- Carrusel de imágenes -->
+<section id="carrusel">
+    <div class="carrusel-container">
+        <div class="carrusel-images">
+            <img src="file://C:/Users/alexi/Documents/pima/Imagenes/muestrados.jpg" alt="Imagen 1" class="carrusel-img">
+            <img src="file://C:/Users/alexi/Documents/pima/Imagenes/muestratres.jpg" alt="Imagen 2" class="carrusel-img">
+            <img src="file://C:/Users/alexi/Documents/pima/Imagenes/muestrauno.jpeg" alt="Imagen 3" class="carrusel-img">
+        </div>
+        <!-- Contenedor de los botones de navegación -->
+        <div id="move">
+            <button class="prev" onclick="moverCarrusel(-1)">&#10094;</button>
+            <button class="next" onclick="moverCarrusel(1)">&#10095;</button>
+        </div>
+    </div>P
+</section>
+
+<!-- Blog -->
+<div id="presentacion">
+    <section id="Nosotros">
+        <!-- Primera sección: Texto a la izquierda, Imagen a la derecha -->
+        <div class="contenedor-nosotros">
+            <div class="Nosotros-post">
+                <p>
+                    <strong>(empresa)</strong> es una empresa Mexicana, proveedora de soluciones para el área de cuidado y comodidad en tu hogar.
+                    <br><br>
+                    Desde hace más de <strong>(tiempo activo)</strong> años en <strong>(empresa)</strong> desarrollamos relaciones de confianza y de largo plazo colaborando con nuestros clientes para lograr que la seguridad sea la parte principal. Apoyamos a nuestros clientes a resolver sus inquietudes y problemas, con soluciones y servicios que mejoran radicalmente la calidad de vida.
+                    <br><br>
+                    Somos un equipo multidisciplinario apasionado que disfruta de estar involucrado en las tecnologías, que busca retos y se compromete con entregar soluciones a los problemas de nuestros clientes, con beneficios y resultados tangibles para sus negocios y hogares.
+                </p>
+            </div>
+            <div class="img-nosotros">
+                <img src="file://C:/Users/alexi/Documents/pima/Imagenes/muestrados.jpg" alt="Equipo de trabajo" width="500" height="300">
+            </div>
+        </div>
+
+        <!-- Segunda sección: Imagen a la izquierda, Texto a la derecha -->
+        <div class="contenedor-nosotros inverso">
+            <div class="img-nosotros">
+                <img src="file://C:/Users/alexi/Documents/pima/Imagenes/muestrados.jpg" alt="Equipo de trabajo" width="500" height="300">
+            </div>
+            <div class="Nosotros-post">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere libero nec sem congue, sed fermentum justo fermentum. Integer vitae semper orci. Duis malesuada libero id erat interdum, nec aliquet risus imperdiet. Vestibulum nec felis at libero sollicitudin consectetur ac ut eros. Nullam vehicula est et metus rhoncus, a interdum odio consequat. 
+                    <br><br>
+                    Suspendisse potenti. Curabitur auctor eros vel nulla lacinia, quis volutpat neque consequat. Phasellus convallis sem ut lectus tincidunt, nec bibendum elit bibendum. Nunc ultrices, erat ut feugiat sagittis, enim purus tempus lorem, et dapibus tortor nisi sed risus. Pellentesque rutrum orci in elit interdum, nec iaculis tortor mattis.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- Fin de Blog -->
+
+
+<!--Comentarios-->
+<section id="Comentarios">
+    <h2>Comentarios</h2>
+    <div id="comentarios-container"></div>
+    <form id="formulario-comentarios">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <textarea id="comentario" placeholder="Escribe tu comentario" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
+<script src="script.js"></script>
+
+<!--Fin de comentarios-->
+    
+    <!-- Footer Mejorado -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Acerca de Seguridad Total</h3>
+                <ul>
+                    <li><a href="#Nosotros">Sobre Nosotros</a></li>
+                    <li><a href="file:///C:/Users/alexi/Documents/pima/Contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Soporte</h3>
+                <ul>
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Guías de Seguridad</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Monitoreo 24/7</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="file://C:/Users/alexi/Documents/pima/Imagenes/facebook.png" alt="Facebook" width="30" height="30"></a>
+                    <a href="#"><img src="file://C:/Users/alexi/Documents/pima/Imagenes/instagram.png" alt="instagram" width="30" height="30"></a>
+                    <a href="#"><img src="file://C:/Users/alexi/Documents/pima/Imagenes/youtube.png" alt="Youtube" width="30" height="30"></a>
+                    <a href="#"><img src="file://C:/Users/alexi/Documents/pima/Imagenes/tik-tok.png" alt="Tiktok" width="30" height="30"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seguridad Total. Todos los derechos reservados.</p>
+            <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+            <button class="contact-button">Habla con Nosotros</button>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("formulario-comentarios").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let nombre = document.getElementById("nombre").value;
+            let comentario = document.getElementById("comentario").value;
+            if(nombre && comentario) {
+                let nuevoComentario = document.createElement("p");
+                nuevoComentario.innerHTML = `<strong>${nombre}:</strong> ${comentario}`;
+                document.getElementById("comentarios-container").appendChild(nuevoComentario);
+                localStorage.setItem(nombre, comentario);
+                document.getElementById("formulario-comentarios").reset();
+            }
+        });
+
+        window.onload = function() {
+            let comentariosDiv = document.getElementById("comentarios");
+            for(let i = 0; i < localStorage.length; i++) {
+                let nombre = localStorage.key(i);
+                let comentario = localStorage.getItem(nombre);
+                let comentarioCargado = document.createElement("p");
+                comentarioCargado.innerHTML = `<strong>${nombre}:</strong> ${comentario}`;
+                comentariosDiv.appendChild(comentarioCargado);
+            }
+        }
+    </script>
+</body>
+</html>
