@@ -64,11 +64,15 @@ function agregarComentarioDOM(comentarioObj) {
     document.getElementById("comentarios-container").appendChild(comentarioDiv);
 }
 
-// Cargar comentarios desde localStorage
 function cargarComentarios() {
     let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
-    comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentarios-container));
+    
+    // Asegurarte de que no se muestre el JSON crudo
+    document.getElementById("comentarios-container").innerHTML = "";
+
+    comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentario));
 }
+
 
 // Eliminar un comentario
 function eliminarComentario(id) {
