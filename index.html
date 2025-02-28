@@ -157,7 +157,7 @@
         document.getElementById("formulario-comentarios").addEventListener("submit", function(event) {
             event.preventDefault();
             let nombre = document.getElementById("nombre").value;
-            let comentario = document.getElementById("comentarios").value;
+            let comentario = document.getElementById("comentarios-container").value;
             if(nombre && comentario) {
                 let nuevoComentario = document.createElement("p");
                 nuevoComentario.innerHTML = `<strong>${nombre}:</strong> ${comentario}`;
