@@ -157,7 +157,7 @@
         document.getElementById("formulario-comentarios").addEventListener("submit", function(event) {
             event.preventDefault();
             let nombre = document.getElementById("nombre").value;
-            let comentario = document.getElementById("comentarios-container").value;
+            let comentario = document.getElementById("comentarios").value;
             if(nombre && comentario) {
                 let nuevoComentario = document.createElement("p");
                 nuevoComentario.innerHTML = `<strong>${nombre}:</strong> ${comentario}`;
@@ -168,7 +168,7 @@
         });
 
         window.onload = function() {
-            let comentariosDiv = document.getElementById("comentarios");
+            let comentariosDiv = document.getElementById("comentarios-container");
             for(let i = 0; i < localStorage.length; i++) {
                 let nombre = localStorage.key(i);
                 let comentario = localStorage.getItem(nombre);
