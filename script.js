@@ -67,7 +67,7 @@ function agregarComentarioDOM(comentarioObj) {
 // Cargar comentarios desde localStorage
 function cargarComentarios() {
     let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
-    comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentario));
+    comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentarios-container));
 }
 
 // Eliminar un comentario
