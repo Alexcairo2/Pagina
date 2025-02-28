@@ -48,7 +48,7 @@ function agregarComentarioDOM(comentarioObj) {
     comentarioDiv.setAttribute("data-id", comentarioObj.id);
 
     comentarioDiv.innerHTML = `
-        <img src="file://C:/Users/alexi/Documents/pima/Imagenes/usuario.png" class="avatar" alt="Avatar">
+        <img src="https://github.com/Alexcairo2/Pagina/blob/paginatest/Imagenes/usuario.png?raw=true" alt="Avatar">
         <div class="comentario-texto">
             <strong>${comentarioObj.nombre}:</strong> <br> ${comentarioObj.comentario}
         </div>
