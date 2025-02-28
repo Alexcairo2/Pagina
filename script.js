@@ -72,6 +72,11 @@ function cargarComentarios() {
 
     comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentario));
 }
+// Cargar comentarios desde localStorage
+//function cargarComentarios() {
+    //let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
+    //comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentarios));
+//}
 
 
 // Eliminar un comentario
