@@ -1,23 +1,22 @@
-// Espera a que la página cargue para mostrar los comentarios guardados
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     cargarComentarios();
 });
 
-// Función para agregar comentario
-document.getElementById("formulario-comentarios").addEventListener("submit", function(event) {
+// Evento para enviar comentarios
+document.getElementById("formulario-comentarios").addEventListener("submit", function (event) {
     event.preventDefault();
     agregarComentario();
 });
 
 // Permitir enviar con Enter sin salto de línea
-document.getElementById("comentario").addEventListener("keypress", function(event) {
-    if (event.key === "Enter" && !event.shiftKey) { 
+document.getElementById("comentario").addEventListener("keypress", function (event) {
+    if (event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
         agregarComentario();
     }
 });
 
-// Agregar comentario a localStorage y a la vista
+// Agregar comentario a localStorage y al DOM
 function agregarComentario() {
     let nombre = document.getElementById("nombre").value.trim();
     let comentario = document.getElementById("comentario").value.trim();
@@ -36,19 +35,22 @@ function agregarComentario() {
         comentariosGuardados.push(nuevoComentario);
         localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
 
+        // Agregar comentario al DOM
         agregarComentarioDOM(nuevoComentario);
+
+        // Limpiar formulario
         document.getElementById("formulario-comentarios").reset();
     }
 }
 
-// Función para agregar un comentario al DOM
+// Agregar comentario al DOM
 function agregarComentarioDOM(comentarioObj) {
     let comentarioDiv = document.createElement("div");
     comentarioDiv.classList.add("comentario");
     comentarioDiv.setAttribute("data-id", comentarioObj.id);
 
     comentarioDiv.innerHTML = `
-        <img src="https://github.com/Alexcairo2/Pagina/blob/paginatest/Imagenes/usuario.png?raw=true" alt="Avatar">
+        <img src="file://C:/Users/alexi/Documents/pima/Imagenes/usuario.png" class="avatar" alt="Avatar">
         <div class="comentario-texto">
             <strong>${comentarioObj.nombre}:</strong> <br> ${comentarioObj.comentario}
         </div>
@@ -56,7 +58,7 @@ function agregarComentarioDOM(comentarioObj) {
     `;
 
     // Evento para eliminar comentario
-    comentarioDiv.querySelector(".eliminar-btn").addEventListener("click", function() {
+    comentarioDiv.querySelector(".eliminar-btn").addEventListener("click", function () {
         eliminarComentario(comentarioObj.id);
         comentarioDiv.remove();
     });
@@ -64,28 +66,18 @@ function agregarComentarioDOM(comentarioObj) {
     document.getElementById("comentarios-container").appendChild(comentarioDiv);
 }
 
+// Cargar comentarios desde localStorage al cargar la página
 function cargarComentarios() {
     let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
-    
-    // Asegurarte de que no se muestre el JSON crudo
-    document.getElementById("comentarios-container").innerHTML = "";
-
     comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentario));
 }
-// Cargar comentarios desde localStorage
-//function cargarComentarios() {
-    //let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
-    //comentariosGuardados.forEach(comentario => agregarComentarioDOM(comentarios));
-//}
 
-
-// Eliminar un comentario
+// Eliminar comentario de localStorage
 function eliminarComentario(id) {
     let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
     let nuevosComentarios = comentariosGuardados.filter(comentario => comentario.id !== id);
     localStorage.setItem("comentarios", JSON.stringify(nuevosComentarios));
 }
-
 
 //Carrucel de imagenes
 let indice = 0;
