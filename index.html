@@ -91,8 +91,7 @@
     </section>
 </div>
 <!-- Fin de Blog -->
-
-
+    
 <!--Comentarios-->
 <section id="Comentarios">
     <h2>Comentarios</h2>
@@ -103,8 +102,6 @@
         <button type="submit">Enviar</button>
     </form>
 </section>
-
-
 <script src="script.js"></script>
 
 <!--Fin de comentarios-->
@@ -153,30 +150,5 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById("formulario-comentarios").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let nombre = document.getElementById("nombre").value;
-            let comentario = document.getElementById("comentarios-container").value;
-            if(nombre && comentario) {
-                let nuevoComentario = document.createElement("p");
-                nuevoComentario.innerHTML = `<strong>${nombre}:</strong> ${comentario}`;
-                document.getElementById("comentarios-container").appendChild(nuevoComentario);
-                localStorage.setItem(nombre, comentario);
-                document.getElementById("formulario-comentarios").reset();
-            }
-        });
-
-        window.onload = function() {
-            let comentariosDiv = document.getElementById("comentarios-container");
-            for(let i = 0; i < localStorage.length; i++) {
-                let nombre = localStorage.key(i);
-                let comentario = localStorage.getItem(nombre);
-                let comentarioCargado = document.createElement("p");
-                comentarioCargado.innerHTML = `<strong>${nombre}:</strong> ${comentario}`;
-                comentariosDiv.appendChild(comentarioCargado);
-            }
-        }
-    </script>
 </body>
 </html>
